@@ -40,4 +40,5 @@ Menu
     elif opt == 3:
         quit()
 
-
+if __name__ == "__main__":
+	main()
