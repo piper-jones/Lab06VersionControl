@@ -3,11 +3,20 @@
 def encode(password):
     enc_pass = ""
     for i in range(len(password)):
-        new_dig = int(password[i]) + 3
+        new_dig = int(password[i]) + 3 #this is implemented incorrectly let me make some correct changes
+        if new_dig > 9: #here now it shifts instead of adding
+            new_dig -= 10
         enc_pass += str(new_dig)
     return enc_pass
 
-def decode(enc_pass):
+def decode(enc_pass): #here are my changes
+    dec_pass = ''
+    for i in range(len(enc_pass)):
+        new_dig = int(enc_pass[i]) - 3
+        if new_dig < 0:
+            new_dig += 10
+        dec_pass += str(new_dig)
+    return dec_pass
 
 
 while True:
