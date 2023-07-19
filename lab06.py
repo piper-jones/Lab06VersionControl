@@ -39,6 +39,3 @@ Menu
         print(f"The encoded password is {enc_pass}, and the original password is {dec_pass}.")
     elif opt == 3:
         quit()
-
-if __name__ == "__main__":
-	main()
